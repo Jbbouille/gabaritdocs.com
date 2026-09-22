@@ -1,4 +1,4 @@
-// Capture de l'application : si assets/capture.png existe, elle remplace la maquette HTML.
+// Capture de l'application : si assets/capture.jpg existe, elle remplace la maquette HTML.
 const capture = document.querySelector(".capture");
 const showCapture = () => {
   capture.hidden = false;
