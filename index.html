@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GabaritDoc — Rédaction de mémoires techniques, hors ligne</title>
+  <meta name="description" content="GabaritDoc est un logiciel de bureau pour rédiger, adapter et mettre en page vos mémoires techniques et réponses aux appels d'offres. Vos documents restent sur vos postes, sans cloud ni abonnement par utilisateur.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/email.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="GabaritDoc, accueil">
+      <img src="assets/logo.svg" alt="" width="28" height="28">
+      <span>GabaritDoc</span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#principe">Principe</a>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#local">Local d'abord</a>
+      <a href="#bilan">Forces et limites</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm">Nous contacter</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow">Logiciel de bureau · Windows</p>
+        <h1>Vos mémoires techniques, rédigés et mis en page sur votre poste.</h1>
+        <p class="lead">
+          GabaritDoc sert à produire des réponses aux appels d'offres à partir d'un document de référence.
+          On l'adapte à chaque consultation en cochant quelques questions, et on exporte un PDF aux couleurs
+          de l'entreprise. Rien ne part sur un serveur tiers, et l'application fonctionne sans connexion.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Nous contacter pour l'achat</a>
+          <a href="#fonctionnalites" class="btn btn-ghost">Voir les fonctionnalités</a>
+        </div>
+        <ul class="hero-facts">
+          <li><strong>100 %</strong> hors ligne</li>
+          <li><strong>1 fichier</strong> par document</li>
+          <li><strong>PDF et DOCX</strong> en export</li>
+        </ul>
+      </div>
+
+      <!-- Capture réelle : déposer assets/capture.png, elle remplace alors automatiquement la maquette ci-dessous. -->
+      <div class="hero-visual">
+      <img class="capture" src="assets/capture.png" alt="Capture d'écran de GabaritDoc : plan du document, éditeur et aperçu paginé" hidden>
+      <!-- Illustration de l'interface (contenu fictif), affichée tant qu'il n'y a pas de capture -->
+      <div class="mock" role="img" aria-label="Illustration de l'interface : plan du document à gauche, éditeur au centre, aperçu paginé à droite">
+        <div class="mock-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="mock-title">Mémoire technique — Groupe scolaire</span>
+        </div>
+        <div class="mock-menu">
+          <span>Fichier</span><span>Affichage</span><span>Exporter</span><span>À propos</span>
+        </div>
+        <div class="mock-body">
+          <aside class="mock-side">
+            <p class="mock-label">Liste des éléments</p>
+            <ul>
+              <li class="lvl1">1. Présentation de l'entreprise</li>
+              <li class="lvl2">1.1 Moyens humains</li>
+              <li class="lvl2 is-active">1.2 Moyens matériels</li>
+              <li class="lvl1">2. Méthodologie</li>
+              <li class="lvl2">2.1 Phasage</li>
+              <li class="lvl2 is-hidden">2.2 Site occupé</li>
+              <li class="lvl1">3. Environnement</li>
+            </ul>
+          </aside>
+          <div class="mock-editor">
+            <div class="mock-toolbar">
+              <i></i><i></i><i></i><i class="sep"></i><i></i><i></i><i class="sep"></i><i></i><i></i><i></i>
+            </div>
+            <div class="mock-doc">
+              <p class="m-h2">1.2 Moyens matériels</p>
+              <p class="m-line w90"></p>
+              <p class="m-line w75"></p>
+              <p class="m-line w85">
+                <span class="m-var">{{nom_du_chantier}}</span>
+              </p>
+              <div class="m-labelled">
+                <span class="m-badge">Site occupé</span>
+                <p class="m-line w80"></p>
+                <p class="m-line w60"></p>
+              </div>
+              <p class="m-line w70"></p>
+              <p class="m-todo">TODO : joindre le planning</p>
+            </div>
+          </div>
+          <div class="mock-preview">
+            <div class="mock-page">
+              <span class="pg-h"></span>
+              <span class="pg-l w90"></span><span class="pg-l w80"></span><span class="pg-l w85"></span>
+              <span class="pg-img"></span>
+              <span class="pg-l w70"></span><span class="pg-l w90"></span>
+            </div>
+            <div class="mock-page">
+              <span class="pg-l w85"></span><span class="pg-l w90"></span><span class="pg-l w60"></span>
+              <span class="pg-l w80"></span><span class="pg-l w75"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLÈME ============ -->
+  <section class="section section-alt">
+    <div class="container narrow">
+      <h2 class="section-title">Le même document, réécrit à chaque consultation</h2>
+      <p class="section-lead">
+        La plupart des entreprises qui répondent à des appels d'offres partent d'un mémoire existant,
+        le copient, suppriment les chapitres qui ne s'appliquent pas, corrigent le nom du maître d'ouvrage
+        à vingt endroits, puis se battent avec la mise en page avant la date limite. GabaritDoc
+        automatise ces étapes répétitives. Le temps gagné reste pour la partie du document qui est
+        propre à chaque consultation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PRINCIPE ============ -->
+  <section class="section" id="principe">
+    <div class="container">
+      <p class="eyebrow">Principe</p>
+      <h2 class="section-title">Un document de référence, adapté en trois étapes</h2>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>Étiqueter le contenu</h3>
+          <p>Chaque chapitre ou paragraphe spécifique reçoit un ou plusieurs <em>labels</em> colorés :
+            « Site occupé », « Désamiantage », « Marché public »… Le texte commun n'en a pas besoin.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Répondre aux questions</h3>
+          <p>Pour une nouvelle consultation, on coche les questions qui s'appliquent
+            (« Le bâtiment reste-t-il occupé ? »). Chaque question active ses labels, et les sections
+            hors sujet disparaissent de l'aperçu sans être supprimées.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>Renseigner et exporter</h3>
+          <p>On remplit les variables (client, chantier, dates, montants), reprises partout dans le texte.
+            Il ne reste qu'à vérifier l'aperçu paginé et à exporter un PDF conforme à la charte.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FONCTIONNALITÉS ============ -->
+  <section class="section section-alt" id="fonctionnalites">
+    <div class="container">
+      <p class="eyebrow">Fonctionnalités</p>
+      <h2 class="section-title">Tout ce qu'il faut pour un mémoire, sans outil annexe</h2>
+
+      <div class="feature-groups">
+
+        <div class="feature-group">
+          <h3 class="group-title">Rédaction</h3>
+          <ul class="features">
+            <li>
+              <h4>Éditeur de texte riche</h4>
+              <p>Titres sur cinq niveaux, listes, tableaux, styles de paragraphe et recherche dans le document.</p>
+            </li>
+            <li>
+              <h4>Images et PDF intégrés</h4>
+              <p>Collage direct d'images depuis le presse-papiers. Un PDF (certificat, plaquette, planning) s'insère page par page.</p>
+            </li>
+            <li>
+              <h4>Plan du document</h4>
+              <p>Arborescence numérotée des titres, avec recherche. Un clic amène au passage voulu dans l'éditeur.</p>
+            </li>
+            <li>
+              <h4>Correcteur orthographique local</h4>
+              <p>Dictionnaire français intégré. Le texte est vérifié sur le poste et n'est envoyé à aucun service en ligne.</p>
+            </li>
+            <li>
+              <h4>Marqueurs « à faire »</h4>
+              <p>Points à compléter signalés dans le texte, avec un raccourci pour passer de l'un à l'autre avant l'envoi.</p>
+            </li>
+            <li>
+              <h4>Archivage de passages</h4>
+              <p>Un paragraphe mis de côté est archivé plutôt que supprimé. Il sort de l'export et peut être restauré.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="group-title">Adaptation à chaque consultation</h3>
+          <ul class="features">
+            <li>
+              <h4>Labels</h4>
+              <p>Étiquettes colorées posées sur les sections. Une barre de couleur signale les passages conditionnels dans l'éditeur.</p>
+            </li>
+            <li>
+              <h4>Questions</h4>
+              <p>Questionnaire qui affiche ou masque les sections selon leurs labels. Une question peut piloter plusieurs labels.</p>
+            </li>
+            <li>
+              <h4>Variables typées</h4>
+              <p>Texte, nombre, date ou fichier, à définir une seule fois et reprises partout dans le document.</p>
+            </li>
+            <li>
+              <h4>Nouveau à partir d'un existant</h4>
+              <p>Un nouveau dossier démarre à partir d'un mémoire précédent : contenu, labels, questions et charte sont repris.</p>
+            </li>
+            <li>
+              <h4>Consultation d'un autre document</h4>
+              <p>Un second document s'affiche dans le volet latéral, ce qui permet d'y reprendre un passage sans quitter le dossier en cours.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="group-title">Mise en page et export</h3>
+          <ul class="features">
+            <li>
+              <h4>Aperçu paginé côte à côte</h4>
+              <p>Rendu A4 à côté de l'éditeur, avec zoom ajustable. Un clic dans l'aperçu surligne le passage correspondant dans le texte.</p>
+            </li>
+            <li>
+              <h4>Page de garde, sommaire, contact</h4>
+              <p>Blocs prêts à l'emploi. Le sommaire est numéroté et généré automatiquement à partir des titres.</p>
+            </li>
+            <li>
+              <h4>Charte graphique</h4>
+              <p>Couleurs, polices, fonds de page et pastilles de titres réglés une fois, puis appliqués à tout le document.
+                On peut importer la charte d'un autre document.</p>
+            </li>
+            <li>
+              <h4>Export PDF</h4>
+              <p>PDF prêt à déposer, fidèle à l'aperçu, avec gestion des sauts de page et des images de grande taille.</p>
+            </li>
+            <li>
+              <h4>Export DOCX</h4>
+              <p>Version Word pour les acheteurs qui l'exigent ou pour une relecture externe.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="feature-group">
+          <h3 class="group-title">Suivi et fiabilité</h3>
+          <ul class="features">
+            <li>
+              <h4>Enregistrement automatique</h4>
+              <p>Chaque modification est enregistrée quelques secondes après la frappe, sans bouton « Enregistrer ».</p>
+            </li>
+            <li>
+              <h4>Historique des versions</h4>
+              <p>Chaque version est datée et associée à son contributeur. Une version antérieure se restaure en un clic.</p>
+            </li>
+            <li>
+              <h4>Un fichier autonome</h4>
+              <p>Texte, images, variables, labels, questions, charte et historique sont réunis dans un seul fichier, facile à archiver ou à transmettre.</p>
+            </li>
+            <li>
+              <h4>Fichiers joints</h4>
+              <p>Images, polices et pièces utilisées par le document y sont stockées. Rien ne dépend d'un lien réseau.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOCAL FIRST ============ -->
+  <section class="section section-dark" id="local">
+    <div class="container">
+      <p class="eyebrow eyebrow-light">Local d'abord</p>
+      <h2 class="section-title">Vos réponses aux appels d'offres restent chez vous</h2>
+      <p class="section-lead">
+        Un mémoire technique contient des prix, des méthodes et des références clients. GabaritDoc est
+        une application de bureau, pas un service en ligne : les documents sont des fichiers sur vos postes
+        ou vos partages réseau, sous votre contrôle.
+      </p>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Confidentialité</h3>
+          <p>Aucun compte, aucune synchronisation cachée, aucun envoi de texte à un serveur tiers. Vos règles de sauvegarde et de droits d'accès s'appliquent telles quelles.</p>
+        </div>
+        <div class="pillar">
+          <h3>Disponibilité</h3>
+          <p>Sur un chantier, en déplacement ou pendant une coupure réseau, on peut continuer à rédiger. Aucune maintenance d'un éditeur tiers ne peut bloquer un dépôt.</p>
+        </div>
+        <div class="pillar">
+          <h3>Rapidité</h3>
+          <p>L'édition, l'aperçu et l'export tournent sur la machine, sans aller-retour avec un serveur.</p>
+        </div>
+        <div class="pillar">
+          <h3>Indépendance</h3>
+          <p>Licence d'utilisation, pas d'abonnement par utilisateur. Les documents restent lisibles et exportables même sans renouvellement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMPARAISON ============ -->
+  <section class="section">
+    <div class="container">
+      <p class="eyebrow">Comparaison</p>
+      <h2 class="section-title">GabaritDoc face aux plateformes de propositions en ligne</h2>
+      <p class="section-lead">
+        Les plateformes SaaS de rédaction de propositions sont conçues pour de grandes équipes commerciales
+        qui travaillent à plusieurs sur le même document. GabaritDoc reprend le même objectif pour des
+        équipes plus réduites qui veulent garder leurs données en interne.
+      </p>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col">Critère</th>
+              <th scope="col">GabaritDoc</th>
+              <th scope="col">Plateforme SaaS type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Hébergement des données</th><td class="yes">Sur vos postes</td><td>Serveurs de l'éditeur</td></tr>
+            <tr><th scope="row">Travail sans connexion</th><td class="yes">Oui, intégralement</td><td>Non ou partiellement</td></tr>
+            <tr><th scope="row">Modèle de prix</th><td class="yes">Licence sur devis</td><td>Abonnement par utilisateur</td></tr>
+            <tr><th scope="row">Contenu conditionnel (questions, labels)</th><td class="yes">Oui</td><td>Oui</td></tr>
+            <tr><th scope="row">Charte graphique et export PDF</th><td class="yes">Oui</td><td>Oui</td></tr>
+            <tr><th scope="row">Co-édition en temps réel</th><td class="no">Non</td><td>Oui</td></tr>
+            <tr><th scope="row">Bibliothèque de contenu partagée</th><td class="mid">Par fichiers de référence</td><td>Oui, centralisée</td></tr>
+            <tr><th scope="row">Mise en service</th><td class="yes">Un installateur</td><td>Projet de déploiement</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FORCES / LIMITES ============ -->
+  <section class="section section-alt" id="bilan">
+    <div class="container">
+      <p class="eyebrow">Forces et limites</p>
+      <h2 class="section-title">Ce que GabaritDoc fait bien, et ce qu'il ne fait pas</h2>
+      <p class="section-lead">Pour que vous puissiez juger si l'outil convient à votre organisation avant d'engager une discussion.</p>
+
+      <div class="balance">
+        <div class="balance-col pros">
+          <h3>Forces</h3>
+          <ul>
+            <li><strong>Données maîtrisées.</strong> Aucun contenu ne sort de l'entreprise.</li>
+            <li><strong>Adaptation rapide.</strong> Un mémoire de référence se décline pour une nouvelle consultation en quelques minutes grâce aux questions et aux variables.</li>
+            <li><strong>Rendu soigné.</strong> Charte graphique, page de garde et sommaire automatique, avec un PDF qui correspond à l'aperçu.</li>
+            <li><strong>Pensé pour le mémoire technique.</strong> Il ne s'agit pas d'un traitement de texte généraliste auquel on aurait ajouté quelques options.</li>
+            <li><strong>Historique complet.</strong> On sait qui a modifié quoi et quand, et l'on peut revenir en arrière.</li>
+            <li><strong>Déploiement simple.</strong> Un installateur Windows, sans serveur à administrer.</li>
+            <li><strong>Portabilité.</strong> Un document tient dans un seul fichier.</li>
+          </ul>
+        </div>
+        <div class="balance-col cons">
+          <h3>Limites</h3>
+          <ul>
+            <li><strong>Pas de co-édition simultanée.</strong> Un seul rédacteur modifie un document à la fois. L'historique indique qui a fait quoi.</li>
+            <li><strong>Pas de bibliothèque de contenu centralisée</strong> : les contenus se partagent par documents de référence.</li>
+            <li><strong>Pas de connecteurs</strong> vers un CRM ou une plateforme de dématérialisation.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LICENCE ============ -->
+  <section class="section" id="licence">
+    <div class="container narrow">
+      <p class="eyebrow">Acquisition</p>
+      <h2 class="section-title">Une licence, pas un abonnement</h2>
+      <div class="offer">
+        <ul class="offer-list">
+          <li>Licence d'utilisation perpétuelle de la version acquise</li>
+          <li>Nombre de postes défini selon votre organisation</li>
+          <li>Installation et prise en main accompagnées</li>
+          <li>Paramétrage de votre charte graphique à la demande</li>
+        </ul>
+        <div class="offer-cta">
+          <p class="offer-price">Tarif sur devis</p>
+          <p class="offer-note">selon le nombre de postes et l'accompagnement souhaité</p>
+          <a href="#contact" class="btn btn-primary">Nous contacter pour l'achat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section section-alt" id="faq">
+    <div class="container narrow">
+      <p class="eyebrow">Questions fréquentes</p>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Faut-il une connexion internet ?</summary>
+          <p>Non. Il n'en faut ni pour l'installation une fois l'installateur récupéré, ni pour la rédaction, ni pour l'export.</p>
+        </details>
+        <details>
+          <summary>Où sont stockés les documents ?</summary>
+          <p>Là où vous les enregistrez : sur le poste, sur un partage réseau ou sur un support de sauvegarde. Chaque document est un fichier unique qui contient tout ce qui lui est nécessaire.</p>
+        </details>
+        <details>
+          <summary>Peut-on reprendre nos mémoires existants ?</summary>
+          <p>Oui. Le contenu se colle directement dans l'éditeur (texte, tableaux, images) depuis Word ou d'autres traitements de texte, et les annexes PDF s'insèrent page par page. La mise en forme de la charte s'applique ensuite automatiquement.</p>
+        </details>
+        <details>
+          <summary>Plusieurs personnes peuvent-elles travailler sur un même mémoire ?</summary>
+          <p>Oui, mais chacune à son tour : l'application ne propose pas de co-édition simultanée. Chaque version enregistrée garde le nom de son auteur et la date, et l'on peut revenir à une version précédente.</p>
+        </details>
+        <details>
+          <summary>Nos acheteurs demandent un fichier Word, est-ce possible ?</summary>
+          <p>Oui, l'export DOCX est intégré. Pour un dépôt, nous recommandons le PDF, dont le rendu est le plus fidèle.</p>
+        </details>
+        <details>
+          <summary>Quels systèmes sont pris en charge ?</summary>
+          <p>Windows 10 et 11.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-dark" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow eyebrow-light">Contact</p>
+        <h2 class="section-title">Parlons de votre projet</h2>
+        <p class="section-lead">
+          Décrivez votre contexte : nombre de rédacteurs, volume de réponses par an, contraintes de charte.
+          Nous revenons vers vous avec une proposition et, si vous le souhaitez, une démonstration sur l'un
+          de vos mémoires.
+        </p>
+        <ul class="contact-points">
+          <li>Démonstration à distance ou dans vos locaux</li>
+          <li>Devis adapté au nombre de postes</li>
+          <li>Réponse sous deux jours ouvrés</li>
+        </ul>
+        <p class="contact-direct">
+          Ou écrivez-nous directement :
+          <a class="email" rel="nofollow noindex" href="tontact-gabaritdocs/">votre ckontkact example com</a>
+        </p>
+      </div>
+
+      <!-- Formulaire Google Forms. La hauteur (attribut height) est celle donnée par Google
+           dans le code d'intégration : la mettre à jour si des champs sont ajoutés. -->
+      <div class="contact-embed">
+        <iframe class="contact-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSfgxDrciPNcqLCMOt1g8h7dJYmbHBLPaGSZ3wCdla6uu1eNVA/viewform?embedded=true"
+                height="382" title="Formulaire de demande d'acquisition GabaritDoc" loading="lazy">Chargement…</iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="brand brand-footer">
+      <img src="assets/logo.svg" alt="" width="22" height="22">
+      <span>GabaritDoc</span>
+    </div>
+    <p>Logiciel de rédaction de mémoires techniques, local et hors ligne.</p>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
