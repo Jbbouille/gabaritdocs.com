@@ -95,11 +95,11 @@ p { margin: 0; }
 .hero h1 { font-size: clamp(34px, 4.6vw, 56px); font-weight: 700; margin-bottom: 22px; }
 .lead { font-size: 18.5px; color: var(--ink-2); margin-bottom: 32px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
-.hero-facts { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; border-top: 1px solid var(--line); }
-.hero-facts li { padding: 18px 28px 0; color: var(--ink-3); font-size: 15px; }
+.hero-facts { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+.hero-facts li { padding: 18px 20px 0; color: var(--ink-3); font-size: 14.5px; }
 .hero-facts li:first-child { padding-left: 0; }
 .hero-facts li + li { border-left: 1px solid var(--line); }
-.hero-facts strong { display: block; color: var(--ink); font-size: 20px; }
+.hero-facts strong { display: block; color: var(--ink); font-size: 18px; margin-bottom: 2px; }
 
 /* ---------- Capture ou illustration de l'interface ---------- */
 .hero-visual { min-width: 0; }
